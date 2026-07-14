@@ -1,0 +1,47 @@
+{
+    "programming_languages": [
+        "Python",
+        "Java",
+        "C",
+        "C++",
+        "JavaScript",
+        "TypeScript",
+        "Go",
+        "Rust"
+    ],
+
+    "frameworks": [
+        "FastAPI",
+        "Flask",
+        "Django",
+        "TensorFlow",
+        "PyTorch",
+        "Keras",
+        "Scikit-learn",
+        "LangChain",
+        "LangGraph"
+    ],
+
+    "databases": [
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB",
+        "SQLite",
+        "Redis"
+    ],
+
+    "cloud": [
+        "AWS",
+        "Azure",
+        "GCP"
+    ],
+
+    "tools": [
+        "Git",
+        "Docker",
+        "Linux",
+        "GitHub",
+        "Jupyter",
+        "VS Code"
+    ]
+}

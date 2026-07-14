@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from pipeline.entities import ResumeSections
+from pipeline.entities import ResumeSections, Candidate
 
 
 @dataclass
@@ -17,6 +17,9 @@ class ResumeContext:
         default_factory=ResumeSections
     )
 
-    extracted_data: dict = field(default_factory=dict)
+    # extracted_data: dict = field(default_factory=dict)
+    candidate: Candidate = field(
+        default_factory=Candidate
+    )
 
     validated_data: dict = field(default_factory=dict)

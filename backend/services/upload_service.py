@@ -71,9 +71,21 @@ class UploadService:
         logger.info("Resume parsed successfully.")
 
         # Print extracted text to console (temporary)
-        print("\n" + "=" * 80)
-        print(context.clean_text)
-        print("=" * 80 + "\n")
+        # print("\n" + "=" * 80)
+        # print(context.clean_text)
+        # print("=" * 80 + "\n")
+
+        # print("=" * 80)
+        # print(context.candidate)
+        # print("=" * 80)
+
+        # print("\n" + "=" * 100)
+        # print("CANDIDATE OBJECT")
+        # print("=" * 100)
+
+        # print(context.candidate)
+
+        # print("=" * 100)
 
         # Response
         return {

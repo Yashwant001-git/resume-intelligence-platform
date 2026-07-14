@@ -5,3 +5,5 @@ pydantic
 sqlalchemy
 python-dotenv
 pymupdf
+Docker
+TensorFlow

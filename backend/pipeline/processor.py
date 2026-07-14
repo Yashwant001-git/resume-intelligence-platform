@@ -6,6 +6,10 @@ from pipeline.preprocessor import Preprocessor
 from pipeline.section_detector import SectionDetector
 from utils.logger import logger
 
+from pipeline.extractors.personal_info import PersonalInfoExtractor
+from pipeline.extractors.skills import SkillsExtractor
+
+
 
 class ResumeProcessor:
     """
@@ -42,6 +46,11 @@ class ResumeProcessor:
         # Stage 3 : Detect Sections
         SectionDetector.detect(context)
         logger.info("Section detection completed.")
+
+        PersonalInfoExtractor.process(context)
+        logger.info("Personal information extraction completed.")
+
+        SkillsExtractor.process(context)
 
         logger.info("=" * 80)
         logger.info("Resume Processing Pipeline Completed")
