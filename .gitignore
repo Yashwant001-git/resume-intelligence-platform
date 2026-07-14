@@ -1,0 +1,76 @@
+# ==========================
+# Python
+# ==========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+.venv/
+env/
+ENV/
+
+# Environment Variables
+.env
+.env.*
+
+# Logs
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Mypy
+.mypy_cache/
+
+# Ruff
+.ruff_cache/
+
+# Distribution
+build/
+dist/
+*.egg-info/
+
+# Uploaded Resume Files
+uploads/
+
+# Temporary Files
+temp/
+tmp/
+
+# SQLite Database
+*.db
+*.sqlite3
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Model Files (optional)
+*.h5
+*.keras
+*.ckpt
+
+# Large Model Files
+models/*.bin
+models/*.pt
+models/*.pth
+
+# PDF Extraction Output (if generated)
+output/
+results/
+
+# Secrets
+secrets.json
+credentials.json
