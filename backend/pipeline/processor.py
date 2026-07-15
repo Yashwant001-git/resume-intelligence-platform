@@ -8,8 +8,10 @@ from utils.logger import logger
 
 from pipeline.extractors.personal_info import PersonalInfoExtractor
 from pipeline.extractors.skills import SkillsExtractor
-
-
+from pipeline.extractors.education import EducationExtractor
+from pipeline.extractors.experience import ExperienceExtractor
+from pipeline.extractors.projects import ProjectExtractor
+from pipeline.extractors.certifications import CertificationExtractor
 
 class ResumeProcessor:
     """
@@ -47,10 +49,29 @@ class ResumeProcessor:
         SectionDetector.detect(context)
         logger.info("Section detection completed.")
 
+        # Stage 4.1 : Personal Info Extraction
         PersonalInfoExtractor.process(context)
         logger.info("Personal information extraction completed.")
 
+        # Stage 4.2 : Skill Extraction
         SkillsExtractor.process(context)
+        logger.info("Skill extraction completed.")
+
+        # Stage 4.3 : Eduction Extraction
+        EducationExtractor.process(context)
+        logger.info("Education extraction completed.")
+
+        #Stage 4.4 : Experience Extraction
+        ExperienceExtractor.process(context)
+        logger.info("Experience extraction completed.")
+
+        #Stage 4.5 : Project Extractor
+        ProjectExtractor.process(context)
+        logger.info("Project extraction completed.")
+
+        #Stage 4.6 : Certificates Extractor
+        CertificationExtractor.process(context)
+        logger.info("Certification extraction completed.")
 
         logger.info("=" * 80)
         logger.info("Resume Processing Pipeline Completed")

@@ -6,6 +6,7 @@ from fastapi import HTTPException, UploadFile
 from config.settings import SUPPORTED_FORMATS, MAX_FILE_SIZE, UPLOAD_DIR
 from utils.logger import logger
 from pipeline.processor import ResumeProcessor
+from exporters.excel_exporter import ExcelExporter
 
 class UploadService:
 
@@ -68,25 +69,11 @@ class UploadService:
         # text = ResumeProcessor.process(save_path)
         context = ResumeProcessor.process(save_path)
 
+        #Export Info to Excel
+        ExcelExporter.export(context.candidate)
+
         logger.info("Resume parsed successfully.")
-
-        # Print extracted text to console (temporary)
-        # print("\n" + "=" * 80)
-        # print(context.clean_text)
-        # print("=" * 80 + "\n")
-
-        # print("=" * 80)
-        # print(context.candidate)
-        # print("=" * 80)
-
-        # print("\n" + "=" * 100)
-        # print("CANDIDATE OBJECT")
-        # print("=" * 100)
-
-        # print(context.candidate)
-
-        # print("=" * 100)
-
+        
         # Response
         return {
 

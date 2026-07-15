@@ -101,3 +101,20 @@ class Candidate:
     certifications: list[str] = field(default_factory=list)
 
     languages: list[str] = field(default_factory=list) 
+
+
+
+@dataclass
+class ValidationIssue:
+    field: str
+    message: str
+    severity: str = "warning"
+
+
+@dataclass
+class ValidationReport:
+    score: int = 100
+
+    issues: list[ValidationIssue] = field(default_factory=list)
+
+    warnings: list[str] = field(default_factory=list)

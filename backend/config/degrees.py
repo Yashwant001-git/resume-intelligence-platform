@@ -1,0 +1,18 @@
+DEGREES = [
+    "Bachelor of Technology",
+    "B.Tech",
+    "Bachelor of Engineering",
+    "B.E",
+    "Bachelor of Science",
+    "B.Sc",
+    "Bachelor of Computer Applications",
+    "BCA",
+    "Master of Technology",
+    "M.Tech",
+    "Master of Science",
+    "M.Sc",
+    "Master of Computer Applications",
+    "MCA",
+    "MBA",
+    "PhD",
+]
